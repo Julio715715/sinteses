@@ -351,24 +351,26 @@ button.destaque.grande{border-radius:9px;padding:13px 24px;font-size:15.5px;marg
     font-size:8pt;color:#6b6a63;text-align:center;line-height:1.4}
 }
 /* separação entre camadas e rodadas */
-.camada,.rodada{border-width:1px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
-.camada{border-left:6px solid var(--oliva);margin:0 0 22px}
-.rodada{border-left:6px solid var(--rust);margin:0 0 64px}
-.cam-h,.r-h{padding:16px 20px;border-bottom:1px solid var(--fio)}
-.cam-h{background:color-mix(in srgb,var(--oliva) 13%,var(--cartao))}
-.r-h{background:color-mix(in srgb,var(--rust) 11%,var(--cartao))}
-.cam-n,.r-n{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
-.cam-n{color:var(--oliva)}
-.cam-s{font-family:'Newsreader',Georgia,serif;font-size:21px;font-weight:600;color:var(--tinta-f)}
-.r-t{font-size:21px}
-.camada.recolhida{margin-bottom:22px}
-.camada.recolhida .cam-h{border-bottom:0}
-@media (prefers-color-scheme:dark){.camada,.rodada{box-shadow:none}
- :root:not([data-theme="light"]) .cam-n{color:#B4B06A}}
-:root[data-theme="dark"] .cam-n{color:#B4B06A}
-
-.camada,.rodada{scroll-margin-top:72px}
-@media (max-width:600px){.camada,.rodada{scroll-margin-top:118px}.rodada{margin-bottom:48px}}
+.camada,.rodada{border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.08);scroll-margin-top:72px}
+.camada{border:2px solid var(--oliva);border-left-width:12px;margin:0 0 20px}
+.rodada{border:2px solid var(--rust);border-left-width:12px;margin:0 0 30px}
+.rodada + .camada,.rodada + .sintese,.rodada + section{margin-top:96px;position:relative}
+.cam-h,.r-h{padding:18px 22px;border-bottom:0;opacity:1}
+.cam-h{background:var(--oliva)}
+.r-h{background:var(--rust)}
+.cam-n,.r-n{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+ color:#fff;background:rgba(255,255,255,.18);border-radius:20px;padding:4px 11px}
+.cam-s,.r-t{font-family:'Newsreader',Georgia,serif;font-size:23px;font-weight:600;color:#fff}
+.r-q{color:rgba(255,255,255,.82)}
+.cam-h .recolher{border-color:rgba(255,255,255,.5);color:#fff}
+.r-h button.pdf{background:#fff;color:var(--rust)}
+.rodada .r-corpo,.rodada .quem,.rodada .r-trava{background:color-mix(in srgb,var(--rust) 5%,var(--cartao))}
+.camada.recolhida{margin-bottom:20px}
+.camada.recolhida .cam-h,.rodada.bloqueada .r-h{opacity:.7}
+@media (max-width:600px){.camada,.rodada{scroll-margin-top:118px;border-left-width:8px}
+ .rodada + .camada,.rodada + .sintese,.rodada + section{margin-top:64px}
+ .cam-s,.r-t{font-size:20px}}
+@media (prefers-color-scheme:dark){.camada,.rodada{box-shadow:none}}
 </style>
 </head>
 <body>
